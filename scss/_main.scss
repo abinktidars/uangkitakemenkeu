@@ -338,6 +338,7 @@
       &--yuyun {
         left: 10%;
         width: 31%;
+        z-index: 2;
 
         @include max-responsive($sm){
           left: 0;
@@ -438,15 +439,16 @@
         line-height: 1.4;
         font-weight: 600;
         padding: 70px 100px 20px 60px;
+        transform-origin: 100% 50%;
 
         @include max-responsive($sm) {
           width: 300px;
-          height: 240px;
+          height: 250px;
           text-align: center;
           font-size: 12px;
           line-height: 1.4;
           font-weight: 600;
-          padding: 20px 90px 20px 50px;
+          padding: 30px 90px 20px 50px;
           display: flex;
           align-items: center;
         }
@@ -1474,26 +1476,7 @@
           cursor: pointer;
           @include transition(0.3s);
           @include base_position_y(-5px);
-          fill: #f1f1f1;
-
-          // &.st0{
-          //   fill: #F8E8A5;
-          // }
-          // &.st1{
-          //   fill: #F8E8A5
-          // }
-          // &.st2{
-          //   fill: #F8E8A5;
-          // }
-          // &.st3{
-          //   fill: #F26822;
-          // }
-          // &.st4{
-          //   fill: #F8E8A5;
-          // }
-          // &.st6{
-          //   fill: #F8E8A5;
-          // }
+          fill: #f1f1f1;        
         }
       }
       .label {
@@ -1642,7 +1625,7 @@
             background: #f8e8a5;
 
             @include max-responsive($sm) {
-              bottom: -28%;
+              bottom: -22%;
               right: 34%;
             }
 

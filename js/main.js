@@ -139,23 +139,26 @@ $(document).ready(function() {
         $(".page__static__transaksi").addClass("hide");
       }
       else if (index == 13 && direction == "down") {
-        
+        $(".pattern__top").fadeOut(300);        
       }
       else if (index == 14 && direction == "up") {
-        
+        $(".pattern__top").fadeIn(300);        
       }
       else if (index == 14 && direction == "down") {
         $(".social").fadeOut(300);
+        $(".quotes__bubble__3").addClass("animate--scaleIn")       
       }
       else if (index == 15 && direction == "up") {
-        $(".social").fadeIn(300);
-        
+        $(".quotes__bubble__3").removeClass("animate--scaleIn")       
+        $(".social").fadeIn(300);        
       }
       else if (index == 15 && direction == "down") {
+        $(".quotes__bubble__3").removeClass("animate--scaleIn")  
         $(".social").fadeIn(300);
         $(".page__static__ukm").removeClass("hide");
       }
       else if (index == 16 && direction == "up") {
+        $(".quotes__bubble__3").addClass("animate--scaleIn")       
         $(".social").fadeOut(300);
         $(".page__static__ukm").addClass("hide");        
       }
@@ -310,11 +313,13 @@ $(document).ready(function() {
     $(".rain.back-row").append(backDrops);
   };
   makeItRain();
+  
 });
 
 // Mobile Version
 if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {
   $(".cover__background").remove();
 } else {
-   
+  $(".social__item--wa").hide();
 }
+
